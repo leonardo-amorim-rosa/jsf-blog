@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>JSF 2.1 Blog</title>
+    </h:head>
+
+    <h:body>
+        <h:form id="masterForm" prependId="false">
+            <div id="top" class="top">
+                <ui:insert name="top">
+                    <h2>JSF 2.1 Blog</h2>
+                </ui:insert>
+            </div>
+            <div>
+                <div id="left">
+                    <ui:insert name="left">
+                        <ul>
+                            <li><p:link href="/index.xhtml" value="Home" /></li>
+                            <li>Last Posts</li>
+                            <li>Last Users</li>
+                            <li>Last Comments</li>
+                        </ul>
+                        <ul>
+                            <li>Post</li>
+                            <li>Manage Users</li>
+                            <li><p:link href="/create_account.xhtml" value="Create Account" /></li>
+                        </ul>
+                    </ui:insert>
+                </div>
+                <div id="content" class="left_content">
+                    <ui:insert name="content">Content</ui:insert>
+                </div>
+            </div>
+        </h:form>    
+    </h:body>
+
+</html>
